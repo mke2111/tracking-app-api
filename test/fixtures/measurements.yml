@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hours: MyString
+  memory: MyString
+  user: one
+  measure: one
+
+two:
+  hours: MyString
+  memory: MyString
+  user: two
+  measure: two
