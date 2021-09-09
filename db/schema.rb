@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_05_024129) do
+ActiveRecord::Schema.define(version: 2021_09_09_202238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "measurements", force: :cascade do |t|
-    t.string "hours"
-    t.string "memory"
-    t.bigint "user_id", null: false
-    t.bigint "measure_id", null: false
+    t.integer "hours"
+    t.integer "memory"
+    t.bigint "users_id", null: false
+    t.bigint "measures_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["measure_id"], name: "index_measurements_on_measure_id"
-    t.index ["user_id"], name: "index_measurements_on_user_id"
+    t.index ["measures_id"], name: "index_measurements_on_measures_id"
+    t.index ["users_id"], name: "index_measurements_on_users_id"
   end
 
   create_table "measures", force: :cascade do |t|
@@ -39,6 +39,6 @@ ActiveRecord::Schema.define(version: 2021_09_05_024129) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "measurements", "measures"
-  add_foreign_key "measurements", "users"
+  add_foreign_key "measurements", "measures", column: "measures_id"
+  add_foreign_key "measurements", "users", column: "users_id"
 end
