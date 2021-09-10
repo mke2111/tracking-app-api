@@ -3,11 +3,11 @@
 one:
   hours: 1
   memory: 1
-  users: one
-  measures: one
+  user: one
+  measure: one
 
 two:
   hours: 1
   memory: 1
-  users: two
-  measures: two
+  user: two
+  measure: two
