@@ -7,6 +7,6 @@ class Measurement < ApplicationRecord
 
   before_save do |m|
     measure = m.measure
-    m.memory = measure.memory * m.hours
+    m.memory = 1.5 * m.hours
   end
 end
