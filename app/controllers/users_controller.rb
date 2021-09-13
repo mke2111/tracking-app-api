@@ -1,28 +1,30 @@
 class UsersController < ApplicationController
-  before_action :logged?, except: :create
-
-  def show
-    user = User.find(params[:id])
-    measures = Measure.all
-    render json: { user: user, measures: measures }
-  end
+  skip_before_action :require_login, only: [:create]
 
   def create
     user = User.new(user_params)
-    if user.save
-      render json: user, status: 200
+    if user.valid?
+      user.save
+      payload = { user_id: user.id }
+      token = encode_token(payload)
+      render json: { user: user, jwt: token }
     else
-      render json: user.errors, status: :unprocessable_entity
+      render json: { errors: user.errors.full_messages }, status: :not_acceptable
     end
+  end
+
+  def show
+    user = obtain_user
+    render json: user
   end
 
   private
 
   def user_params
-    params.permit(:name)
+    params.permit(:id, :username, :password)
   end
 
-  def logged?
-    redirect_to error_path unless !params[:uid].nil? || params[:uid] != ''
+  def obtain_user
+    User.find(params[:id])
   end
 end
