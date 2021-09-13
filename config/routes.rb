@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :tasks, only: %i[create]
 
   post '/login', to: 'auth#login'
+
   get 'auto_login', to: 'auth#auto_login'
+
   get '/longest/:id', to: 'sessions#longest'
   get '/latest/:id', to: 'sessions#latest'
   get '/top/:id', to: 'subjects#top'
