@@ -8,6 +8,5 @@ class Task < ApplicationRecord
                             .first(5)
                         }
 
-  validates :name, presence: true
-  validates :time, presence: true
+  validates :name, :time, presence: true
 end
