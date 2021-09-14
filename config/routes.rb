@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   get '/longest/:id', to: 'sessions#longest'
   get '/latest/:id', to: 'sessions#latest'
-  get '/top/:id', to: 'subjects#top'
+  get '/top/:id', to: 'tasks#top'
 end
