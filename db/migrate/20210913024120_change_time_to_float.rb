@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChangeTimeToFloat < ActiveRecord::Migration[6.1]
   def up
     change_column :tasks, :time, 'float USING CAST(time AS float)'

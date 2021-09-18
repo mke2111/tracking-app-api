@@ -24,7 +24,7 @@ RSpec.describe 'tasks', type: :request do
   describe 'POST create valid task' do
     before do
       post '/tasks', params: { id: session1.id, task: { name: 'Go', time: 3 } },
-                        headers: encode_token({ user_id: user_id })
+                     headers: encode_token({ user_id: user_id })
     end
     it 'returns created session' do
       expect(json).not_to be_empty
