@@ -11,6 +11,10 @@
 - All user sessions: `/sessions` GET
 - New task: `/tasks` POST
 
+## Frontend Application
+
+[Tracking App](https://github.com/mke2111/tracking-app)
+
 ## Live Version
 
 [Tracking App Api on Heroku](https://mke2111-1.herokuapp.com)
@@ -63,10 +67,6 @@ To use this app locally, this is what you need to:
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-## Acknowledgements
-
-Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) - [Bodytrack.it - An iOs app - Branding, UX and UI](https://www.behance.net/gallery/13271423/Bodytrackit-An-iOs-app-Branding-UX-and-UI)
 
 ## 📝 License
 
