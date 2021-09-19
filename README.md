@@ -2,6 +2,14 @@
 
 > This project is the backend application for the React/Redux Tracking App, an app that lets users track the hours they spend on various activities.
 
+## Frontend Application
+
+[Tracking App](https://github.com/mke2111/tracking-app)
+
+## Live Version
+
+[Tracking App Api on Heroku](https://mke2111-1.herokuapp.com)
+
 ## Endpoints:
 
 - User login: `/login` POST
@@ -11,14 +19,6 @@
 - All user sessions: `/sessions` GET
 - New task: `/tasks` POST
 
-## Frontend Application
-
-[Tracking App](https://github.com/mke2111/tracking-app)
-
-## Live Version
-
-[Tracking App Api on Heroku](https://mke2111-1.herokuapp.com)
-
 ### Built With
 
 This project was built using these technologies.
@@ -27,7 +27,7 @@ This project was built using these technologies.
 - JWT
 - PostgreSQL
 - Rspec (tests)
-- Heroku (deployment)
+- Heroku (Deployment)
 
 ## Installation
 
